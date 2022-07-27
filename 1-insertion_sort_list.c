@@ -21,15 +21,12 @@ void insertion_sort_list(listint_t **list)
 			k++;
 			current = current->next;
 		}
-
 		for (i = 1; i <= k; i++)
 		{
 			current = *list;
 			swapped = 0;
-
 			for (j = 1; j <= (i - 1); j++)
 				current = current->next;
-
 			hole = current;
 			while (hole && hole->prev && ((hole->prev)->n > current->n))
 			{
@@ -41,7 +38,6 @@ void insertion_sort_list(listint_t **list)
 				}
 				hole = hole->prev;
 			}
-
 			if (swapped)
 			{
 				current->next = hole;
